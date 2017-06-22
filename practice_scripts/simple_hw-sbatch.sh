@@ -1,5 +1,7 @@
 #!/bin/bash
 #SBATCH -J HloWorld
+#SBATCH -o HloWorld-%j.out
+#SBATCH -e HloWorld-%j.err
 #SBATCH -p intel
 #SBATCH -n 1
 #SBATCH -c 1
@@ -13,5 +15,5 @@ sleep 2
 echo "Rock Chalk Jayhawk!"
 sleep 2
 echo "Wait, what the heck does that actually mean??"
-#cd nowwhere
+cd nowwhere  # included to create an error message in the example.
 
